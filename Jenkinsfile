@@ -1,5 +1,4 @@
-node("master") {
-    stage('Hello World') {
-        sh 'echo Hello from Jenkins'
-    }
-}
+@Library('piper-library-os') _
+
+fioriOnCloudPlatformPipeline script:this
+
