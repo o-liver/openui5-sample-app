@@ -1,9 +1,8 @@
 steps:
   mtaBuild:
     buildTarget: 'NEO'
-    mtaJarLocation: '/opt/sap/mta.jar'
   neoDeploy:
-    neoHome: '/opt/sap/neo-sdk/'
+    deployMode: mta
     neo:
       credentialsId: 'devops-docker-images-IT-cf'
       account: 's7am47zded'
