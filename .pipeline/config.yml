@@ -4,6 +4,6 @@ steps:
   neoDeploy:
     deployMode: mta
     neo:
-      credentialsId: 'devops-docker-images-IT-cf'
+      credentialsId: 'neo_deploy'
       account: 's7am47zded'
       host: 'eu1.hana.ondemand.com'
