@@ -1,9 +1,10 @@
 steps:
   mtaBuild:
-    buildTarget: 'NEO'
-  neoDeploy:
-    deployMode: mta
-    neo:
-      credentialsId: 'neo_deploy'
-      account: 's7am47zded'
-      host: 'eu1.hana.ondemand.com'
+    buildTarget: 'CF'
+  cloudFoundryDeploy:
+    cloudFoundry:
+      credentialsId: 'cf_deploy'
+      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
+      org: 'D069927trial_trial'
+      space: 'dev'
+
