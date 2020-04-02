@@ -1,0 +1,16 @@
+#Project Setup
+general:
+  unsafeMode: false
+  automaticVersioning: true
+  collectTelemetryData: false
+  projectName: "openui5-sample-app"
+  pipeline: "sap-ui5-neo"
+  
+steps:
+  mtaBuild:
+    mtaBuildTool: cloudMbt
+    applicationName: "testapp"
+    
+  karmaExecuteTests:
+    runCommand: "npm test"
+    stashContent: []
