@@ -7,7 +7,7 @@
     "start": "ui5 serve",
     "lint": "eslint webapp",
     "karma": "karma start",
-    "karma-ci": "rimraf coverage && karma start karma-ci.conf.js",
+    "karma-ci": "rimraf coverage && karma start karma-ci.conf.js --browsers Piper_ChromeRemote",
     "watch": "npm run karma",
     "test": "npm run lint && npm run karma-ci",
     "build": "ui5 build -a --clean-dest",
@@ -26,6 +26,7 @@
     "karma-chrome-launcher": "^3.1.0",
     "karma-coverage": "^2.0.1",
     "karma-ui5": "^1.1.0",
+    "karma-webdriver-launcher": "^1.0.7",
     "local-web-server": "^3.0.7",
     "rimraf": "^3.0.2"
   }

@@ -9,7 +9,19 @@ module.exports = function(config) {
 
 		browserConsoleLogOptions: {
 			level: "error"
-		}
+		},
 
-	});
+		customLaunchers: {
+                  Piper_ChromeRemote: {
+                    base: "WebDriver",
+                    browserName: "chrome",
+                    name: "Karma",
+                    pseudoActivityInterval: 30000,
+                    config: {
+                      hostname: "localhost",
+                      port: 4444
+                    }
+                  }
+                }
+        });
 };
