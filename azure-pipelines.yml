@@ -1,0 +1,27 @@
+# Starter pipeline
+
+# Start with a minimal pipeline that you can customize to build and deploy your code.
+# Add steps that build, run tests, deploy, and more:
+# https://aka.ms/yaml
+
+trigger:
+- master
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- task: DockerInstaller@0
+  inputs:
+    dockerVersion: '17.09.0-ce'
+- task: executePiperStep@0
+  inputs:
+    piperVersion: 'latest'
+    dockerImage: 'devxci/mbtci:1.0.15'
+    stepName: 'mtaBuild'
+    flags: '--buildTarget CF --mtarName MySampleApp.mtar build'
+
+- script: |
+    echo Add other tasks to build, test, and deploy your project.
+    echo See https://aka.ms/yaml
+  displayName: 'Run a multi-line script'
