@@ -17,8 +17,9 @@ steps:
 - task: executePiperStep@0
   inputs:
     piperVersion: 'latest'
-    stepName: 'version'
-    flags: '-v'
+    dockerImage: 'devxci/mbtci:1.0.15'
+    stepName: 'mtaBuild'
+    flags: '--buildTarget   CF    --mtarName      MySampleApp.mtar     build'
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
