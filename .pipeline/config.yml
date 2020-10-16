@@ -3,8 +3,8 @@ steps:
     buildTarget: 'CF'
   cloudFoundryDeploy:
     cloudFoundry:
-      credentialsId: 'cf_deploy'
-      apiEndpoint: 'https://api.cf.eu10.hana.ondemand.com'
-      org: 'D069927trial_trial'
-      space: 'dev'
+      apiEndpoint: "https://api.cf.eu10.hana.ondemand.com"
+      org: "b4de12bftrial"
+      space: "dev"
+      credentialsId: 'cfDeploy'
 
